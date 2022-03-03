@@ -4,9 +4,11 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"time"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
+	currentTime := time.Now()
 	from := ""
 	if r.URL != nil {
 		from = r.URL.String()
